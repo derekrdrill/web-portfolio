@@ -5,7 +5,7 @@ import Title from './Title';
 import profile from '../assets/headshot.jpg';
 
 class App extends Component {
-    state = { displayBio: false };
+    state = { displayBio: 0 };
 
     //Below is the equivalent of above
     // constructor() {

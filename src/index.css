@@ -12,6 +12,14 @@ hr {
     border-radius: 150px;
 }
 
+.basic-app-holder {
+    border-radius: 4px; 
+    box-shadow: 0 0 3px darkslategray; 
+    margin-top: 5%; 
+    padding: 8%; 
+    background-color: white;
+}
+
 .btn-contact {
     background-color: #E2AA3D;
     border-radius: 10px;
@@ -44,6 +52,14 @@ hr {
     color: green;
 }
 
+.hover-hand {
+    cursor: pointer;
+}
+
+.hover-hand:disabled {
+    cursor: not-allowed;
+}
+
 .nav-background {
     background-color: #28262A;
 }
@@ -54,6 +70,12 @@ hr {
 
 .profile {
     border-radius: 1000px;
+}
+
+.sidebar-wrapper {
+    display: inline-block;
+    left: 0px;
+    position: absolute;
 }
 
 .title-fade-out {
@@ -108,6 +130,30 @@ hr {
     border-radius: 100px;
     cursor: pointer;
     padding-top: 1.3%;
+}
+
+.sticky {
+    position: -webkit-sticky; 
+    position: sticky;
+}
+
+#prototypeToggle {
+    background-color:skyblue; 
+    border-bottom-right-radius: 5px; 
+    border-bottom: 3px grey solid; 
+}
+
+#sidebar {
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 5px darkslategrey;
+}
+
+.list-group-item-action {
+    cursor: pointer;
+    color: black;
 }
 
 @keyframes fade-out {

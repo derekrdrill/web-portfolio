@@ -14,7 +14,7 @@ const Navigation = ({ children }) => {
                         <Link className="nav-item nav-link btn btn-nav-item" to='/'>Home</Link>
                         <Link className="nav-item nav-link btn btn-nav-item" to='/jokes'>Jokes</Link>
                         <Link className="nav-item nav-link btn btn-nav-item" to='/music-master'>Music Master</Link>
-                        <a className="nav-item nav-link btn btn-nav-item" href="#">Prototypes</a>
+                        <Link className="nav-item nav-link btn btn-nav-item" to='/business-prototypes'>Prototypes</Link>
                         <a className="nav-item nav-link btn btn-nav-item pr-20" href="#">About</a>
                         <a className="nav-item nav-link btn btn-contact" href="#">Contact Me</a>
                     </div>
