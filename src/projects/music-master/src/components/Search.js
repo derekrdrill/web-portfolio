@@ -19,7 +19,7 @@ class Search extends Component {
 
     render() {
         return (
-            <div className="row text-center">
+            <div className="row">
                 <div className="col-10 col-sm-8 col-md-6 col-lg-4 offset-1 offset-sm-2 offset-md-3 offset-lg-4">
                     <div className="input-group mb-3">
                         <input 

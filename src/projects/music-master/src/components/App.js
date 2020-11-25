@@ -30,8 +30,17 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <h2>Music Master</h2>
+            <div className="mt-5">
+                <h2 className="mb-4">Music Master</h2>
+                <p>This app utilizes the Spotify API to search artists based on what is entered below.</p>
+                <p>A successful search will return the following: an image of the artist, their follower count, related genres, and an origanized array of Spotify's top songs for you to preview!</p>
+                {/* <ol>
+                    <li>an image of the artist</li>
+                    <li>follower count</li>
+                    <li>genres & </li>
+                    <li>an origanized array of Spotify's top songs for you to preview!</li>
+                </ol> */}
+                <p>Enjoy!</p>
                 <Search searchArtist={this.searchArtist}/>
                 <Artist artist={this.state.artist} />
                 <hr />

@@ -35790,7 +35790,9 @@ if ("development" === 'production') {
 require('./warnAboutDeprecatedCJSRequire.js')('createBrowserHistory');
 module.exports = require('./index.js').createBrowserHistory;
 
-},{"./warnAboutDeprecatedCJSRequire.js":"../node_modules/history/warnAboutDeprecatedCJSRequire.js","./index.js":"../node_modules/history/index.js"}],"components/Navigation.js":[function(require,module,exports) {
+},{"./warnAboutDeprecatedCJSRequire.js":"../node_modules/history/warnAboutDeprecatedCJSRequire.js","./index.js":"../node_modules/history/index.js"}],"assets/header-logo.png":[function(require,module,exports) {
+module.exports = "/header-logo.3978d323.png";
+},{}],"components/Navigation.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35802,6 +35804,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _headerLogo = _interopRequireDefault(require("../assets/header-logo.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Navigation = function Navigation(_ref) {
@@ -35811,7 +35815,10 @@ var Navigation = function Navigation(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     className: "navbar-brand navbar-brand-style",
     to: "/"
-  }, "DD Web Based Solutions"), /*#__PURE__*/_react.default.createElement("button", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "header-logo",
+    src: _headerLogo.default
+  })), /*#__PURE__*/_react.default.createElement("button", {
     className: "navbar-toggler",
     type: "button",
     "data-toggle": "collapse",
@@ -35825,31 +35832,43 @@ var Navigation = function Navigation(_ref) {
     className: "collapse navbar-collapse",
     id: "navBarList"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "navbar-nav"
+    className: "navbar-nav ml-auto"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "dropdown"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    className: "nav-link dropdown-toggle",
+    href: "#",
+    id: "navbarDropdown",
+    role: "button",
+    "data-toggle": "dropdown",
+    "aria-haspopup": "true",
+    "aria-expanded": "false"
+  }, "For Fun!"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "dropdown-menu ml-auto",
+    "aria-labelledby": "navbarDropdown"
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     className: "nav-item nav-link btn btn-nav-item",
-    to: "/"
-  }, "Home"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    className: "nav-item nav-link btn btn-nav-item",
     to: "/jokes"
-  }, "Jokes"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "Jokes"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "dropdown-divider",
+    style: {
+      borderTop: '1px dashed gainsboro'
+    }
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     className: "nav-item nav-link btn btn-nav-item",
     to: "/music-master"
-  }, "Music Master"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "Music Master"))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     className: "nav-item nav-link btn btn-nav-item",
     to: "/business-prototypes"
   }, "Prototypes"), /*#__PURE__*/_react.default.createElement("a", {
     className: "nav-item nav-link btn btn-nav-item pr-20",
     href: "#"
-  }, "About"), /*#__PURE__*/_react.default.createElement("a", {
-    className: "nav-item nav-link btn btn-contact",
-    href: "#"
-  }, "Contact Me")))), children);
+  }, "About")))), children);
 };
 
 var _default = Navigation;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"assets/project1.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../assets/header-logo.png":"assets/header-logo.png"}],"assets/project1.png":[function(require,module,exports) {
 module.exports = "/project1.0e13da1c.png";
 },{}],"assets/project2.png":[function(require,module,exports) {
 module.exports = "/project2.d48872d8.png";
@@ -36238,6 +36257,8 @@ var _default = Title;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"assets/headshot.jpg":[function(require,module,exports) {
 module.exports = "/headshot.41809fa3.jpg";
+},{}],"assets/bitmoji1.png":[function(require,module,exports) {
+module.exports = "/bitmoji1.0d2ffeac.png";
 },{}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
@@ -36255,6 +36276,8 @@ var _SocialProfiles = _interopRequireDefault(require("./SocialProfiles"));
 var _Title = _interopRequireDefault(require("./Title"));
 
 var _headshot = _interopRequireDefault(require("../assets/headshot.jpg"));
+
+var _bitmoji = _interopRequireDefault(require("../assets/bitmoji1.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36307,9 +36330,11 @@ var App = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "toggleDisplayBio", function () {
-      _this.setState({
-        displayBio: !_this.state.displayBio
-      });
+      setTimeout(function () {
+        _this.setState({
+          displayBio: !_this.state.displayBio
+        });
+      }, 100);
     });
 
     return _this;
@@ -36319,18 +36344,52 @@ var App = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
-        className: "container-fluid"
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        src: _headshot.default,
-        alt: "profile",
-        className: "col-6 col-md-4 col-lg-2 profile"
-      }), /*#__PURE__*/_react.default.createElement("h1", null, "Hello!!"), /*#__PURE__*/_react.default.createElement("p", null, "My name is Derek."), /*#__PURE__*/_react.default.createElement(_Title.default, null), /*#__PURE__*/_react.default.createElement("p", null, "I'm always looking forward to helping people and building solutions."), this.state.displayBio ? /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "I live in Columbia, and code every day as well!!"), /*#__PURE__*/_react.default.createElement("p", null, "My favorite languages are JavaScript and SQL. I think Knockout.JS is great, I am learning MongoDB, and loving React.JS so far!"), /*#__PURE__*/_react.default.createElement("p", null, "I love my dog George, being active, cooking and sports!"), /*#__PURE__*/_react.default.createElement("button", {
+        className: "container-fluid",
+        style: {
+          marginTop: '100px'
+        }
+      }, /*#__PURE__*/_react.default.createElement("h2", null, "Creative, analytical & passionate Web Developer"), /*#__PURE__*/_react.default.createElement("p", null, "Hi, I'm Derek."), /*#__PURE__*/_react.default.createElement(_Title.default, null), /*#__PURE__*/_react.default.createElement("p", null, "I'm always looking forward to helping people and building solutions."), this.state.displayBio ? /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h4", {
+        className: "mt-4"
+      }, "I code every day and take pride in challenging myself."), /*#__PURE__*/_react.default.createElement("table", {
+        className: "table mt-5",
+        style: {
+          border: '1px solid gainsboro',
+          boxShadow: '0 0 3px navy'
+        }
+      }, /*#__PURE__*/_react.default.createElement("thead", {
+        style: {
+          backgroundColor: 'azure'
+        }
+      }, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", null, "Client-Side ", /*#__PURE__*/_react.default.createElement("i", {
+        className: "fa fa-desktop",
+        "aria-hidden": "true"
+      })), /*#__PURE__*/_react.default.createElement("th", null, "Server-Side ", /*#__PURE__*/_react.default.createElement("i", {
+        className: "fa fa-server",
+        "aria-hidden": "true"
+      })), /*#__PURE__*/_react.default.createElement("th", null, "Database ", /*#__PURE__*/_react.default.createElement("i", {
+        className: "fa fa-database",
+        "aria-hidden": "true"
+      })), /*#__PURE__*/_react.default.createElement("th", null, "Frameworks/Libraries ", /*#__PURE__*/_react.default.createElement("i", {
+        class: "fa fa-book",
+        "aria-hidden": "true"
+      })), /*#__PURE__*/_react.default.createElement("th", null, "Development Tools ", /*#__PURE__*/_react.default.createElement("i", {
+        class: "fa fa-tools",
+        "aria-hidden": "true"
+      })))), /*#__PURE__*/_react.default.createElement("tbody", {
+        style: {
+          backgroundColor: 'beige'
+        }
+      }, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, "HTML"), /*#__PURE__*/_react.default.createElement("td", null, "C#"), /*#__PURE__*/_react.default.createElement("td", null, "SQL Server"), /*#__PURE__*/_react.default.createElement("td", null, "Knockout.js"), /*#__PURE__*/_react.default.createElement("td", null, "SSMS")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, "CSS"), /*#__PURE__*/_react.default.createElement("td", null, "Node.js"), /*#__PURE__*/_react.default.createElement("td", null, "Oracle"), /*#__PURE__*/_react.default.createElement("td", null, "React JS"), /*#__PURE__*/_react.default.createElement("td", null, "VS Code")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, "Javascript"), /*#__PURE__*/_react.default.createElement("td", null, "VB.Net"), /*#__PURE__*/_react.default.createElement("td", null, "MongoDB"), /*#__PURE__*/_react.default.createElement("td", null, "Bootstrap"), /*#__PURE__*/_react.default.createElement("td", null, "Github")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, "jQuery"), /*#__PURE__*/_react.default.createElement("td", null, "Git Bash")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, "jQuery-UI"), /*#__PURE__*/_react.default.createElement("td", null, "npm")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, "Regex")))), /*#__PURE__*/_react.default.createElement("button", {
         className: "btn btn-link",
         onClick: this.toggleDisplayBio
       }, "Show less...")) : /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
         className: "btn btn-link",
         onClick: this.toggleDisplayBio
-      }, "Read more...")), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(_Projects.default, null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(_SocialProfiles.default, null)));
+      }, "Learn more...")), /*#__PURE__*/_react.default.createElement("img", {
+        src: _bitmoji.default,
+        alt: "profile",
+        className: "col-6 col-md-4 col-lg-2 profile"
+      })));
     }
   }]);
 
@@ -36340,7 +36399,7 @@ var App = /*#__PURE__*/function (_Component) {
 ;
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","./Title":"components/Title.js","../assets/headshot.jpg":"assets/headshot.jpg"}],"components/Jokes.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","./Title":"components/Title.js","../assets/headshot.jpg":"assets/headshot.jpg","../assets/bitmoji1.png":"assets/bitmoji1.png"}],"components/Jokes.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36548,7 +36607,7 @@ var Search = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", {
-        className: "row text-center"
+        className: "row"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "col-10 col-sm-8 col-md-6 col-lg-4 offset-1 offset-sm-2 offset-md-3 offset-lg-4"
       }, /*#__PURE__*/_react.default.createElement("div", {
@@ -36872,7 +36931,11 @@ var App = /*#__PURE__*/function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Music Master"), /*#__PURE__*/_react.default.createElement(_Search.default, {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "mt-5"
+      }, /*#__PURE__*/_react.default.createElement("h2", {
+        className: "mb-4"
+      }, "Music Master"), /*#__PURE__*/_react.default.createElement("p", null, "This app utilizes the Spotify API to search artists based on what is entered below."), /*#__PURE__*/_react.default.createElement("p", null, "A successful search will return the following: an image of the artist, their follower count, related genres, and an origanized array of Spotify's top songs for you to preview!"), /*#__PURE__*/_react.default.createElement("p", null, "Enjoy!"), /*#__PURE__*/_react.default.createElement(_Search.default, {
         searchArtist: this.searchArtist
       }), /*#__PURE__*/_react.default.createElement(_Artist.default, {
         artist: this.state.artist
@@ -42271,7 +42334,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64947" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53828" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
