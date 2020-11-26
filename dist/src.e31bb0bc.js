@@ -36255,9 +36255,50 @@ var Title = /*#__PURE__*/function (_Component) {
 
 var _default = Title;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"assets/headshot.jpg":[function(require,module,exports) {
-module.exports = "/headshot.41809fa3.jpg";
-},{}],"assets/bitmoji1.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/Table.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var Table = function Table() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "table-responsive"
+  }, /*#__PURE__*/_react.default.createElement("table", {
+    className: "table mt-5"
+  }, /*#__PURE__*/_react.default.createElement("thead", {
+    className: "tech-table-head"
+  }, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", null, "Client-Side ", /*#__PURE__*/_react.default.createElement("i", {
+    className: "fa fa-desktop",
+    "aria-hidden": "true"
+  })), /*#__PURE__*/_react.default.createElement("th", null, "Server-Side ", /*#__PURE__*/_react.default.createElement("i", {
+    className: "fa fa-server",
+    "aria-hidden": "true"
+  })), /*#__PURE__*/_react.default.createElement("th", null, "Database ", /*#__PURE__*/_react.default.createElement("i", {
+    className: "fa fa-database",
+    "aria-hidden": "true"
+  })), /*#__PURE__*/_react.default.createElement("th", null, "Frameworks/Libraries ", /*#__PURE__*/_react.default.createElement("i", {
+    class: "fa fa-book",
+    "aria-hidden": "true"
+  })), /*#__PURE__*/_react.default.createElement("th", null, "Development Tools ", /*#__PURE__*/_react.default.createElement("i", {
+    class: "fa fa-tools",
+    "aria-hidden": "true"
+  })))), /*#__PURE__*/_react.default.createElement("tbody", {
+    className: "tech-table-body"
+  }, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, "HTML"), /*#__PURE__*/_react.default.createElement("td", null, "C#"), /*#__PURE__*/_react.default.createElement("td", null, "SQL Server"), /*#__PURE__*/_react.default.createElement("td", null, "Knockout.js"), /*#__PURE__*/_react.default.createElement("td", null, "SSMS")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, "CSS"), /*#__PURE__*/_react.default.createElement("td", null, "Node.js"), /*#__PURE__*/_react.default.createElement("td", null, "Oracle"), /*#__PURE__*/_react.default.createElement("td", null, "React JS"), /*#__PURE__*/_react.default.createElement("td", null, "VS Code")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, "Javascript"), /*#__PURE__*/_react.default.createElement("td", null, "VB.Net"), /*#__PURE__*/_react.default.createElement("td", null, "MongoDB"), /*#__PURE__*/_react.default.createElement("td", null, "Bootstrap"), /*#__PURE__*/_react.default.createElement("td", null, "Github")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, "jQuery"), /*#__PURE__*/_react.default.createElement("td", null, "Git Bash")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, "jQuery-UI"), /*#__PURE__*/_react.default.createElement("td", null, "npm")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, "Regex")))));
+};
+
+var _default = Table;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"assets/bitmoji1.png":[function(require,module,exports) {
 module.exports = "/bitmoji1.0d2ffeac.png";
 },{}],"components/App.js":[function(require,module,exports) {
 "use strict";
@@ -36275,7 +36316,7 @@ var _SocialProfiles = _interopRequireDefault(require("./SocialProfiles"));
 
 var _Title = _interopRequireDefault(require("./Title"));
 
-var _headshot = _interopRequireDefault(require("../assets/headshot.jpg"));
+var _Table = _interopRequireDefault(require("./Table"));
 
 var _bitmoji = _interopRequireDefault(require("../assets/bitmoji1.png"));
 
@@ -36350,36 +36391,7 @@ var App = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/_react.default.createElement("h2", null, "Creative, analytical & passionate Web Developer"), /*#__PURE__*/_react.default.createElement("p", null, "Hi, I'm Derek."), /*#__PURE__*/_react.default.createElement(_Title.default, null), /*#__PURE__*/_react.default.createElement("p", null, "I'm always looking forward to helping people and building solutions."), this.state.displayBio ? /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h4", {
         className: "mt-4"
-      }, "I code every day and take pride in challenging myself."), /*#__PURE__*/_react.default.createElement("table", {
-        className: "table mt-5",
-        style: {
-          border: '1px solid gainsboro',
-          boxShadow: '0 0 3px navy'
-        }
-      }, /*#__PURE__*/_react.default.createElement("thead", {
-        style: {
-          backgroundColor: 'azure'
-        }
-      }, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", null, "Client-Side ", /*#__PURE__*/_react.default.createElement("i", {
-        className: "fa fa-desktop",
-        "aria-hidden": "true"
-      })), /*#__PURE__*/_react.default.createElement("th", null, "Server-Side ", /*#__PURE__*/_react.default.createElement("i", {
-        className: "fa fa-server",
-        "aria-hidden": "true"
-      })), /*#__PURE__*/_react.default.createElement("th", null, "Database ", /*#__PURE__*/_react.default.createElement("i", {
-        className: "fa fa-database",
-        "aria-hidden": "true"
-      })), /*#__PURE__*/_react.default.createElement("th", null, "Frameworks/Libraries ", /*#__PURE__*/_react.default.createElement("i", {
-        class: "fa fa-book",
-        "aria-hidden": "true"
-      })), /*#__PURE__*/_react.default.createElement("th", null, "Development Tools ", /*#__PURE__*/_react.default.createElement("i", {
-        class: "fa fa-tools",
-        "aria-hidden": "true"
-      })))), /*#__PURE__*/_react.default.createElement("tbody", {
-        style: {
-          backgroundColor: 'beige'
-        }
-      }, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, "HTML"), /*#__PURE__*/_react.default.createElement("td", null, "C#"), /*#__PURE__*/_react.default.createElement("td", null, "SQL Server"), /*#__PURE__*/_react.default.createElement("td", null, "Knockout.js"), /*#__PURE__*/_react.default.createElement("td", null, "SSMS")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, "CSS"), /*#__PURE__*/_react.default.createElement("td", null, "Node.js"), /*#__PURE__*/_react.default.createElement("td", null, "Oracle"), /*#__PURE__*/_react.default.createElement("td", null, "React JS"), /*#__PURE__*/_react.default.createElement("td", null, "VS Code")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, "Javascript"), /*#__PURE__*/_react.default.createElement("td", null, "VB.Net"), /*#__PURE__*/_react.default.createElement("td", null, "MongoDB"), /*#__PURE__*/_react.default.createElement("td", null, "Bootstrap"), /*#__PURE__*/_react.default.createElement("td", null, "Github")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, "jQuery"), /*#__PURE__*/_react.default.createElement("td", null, "Git Bash")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, "jQuery-UI"), /*#__PURE__*/_react.default.createElement("td", null, "npm")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, "Regex")))), /*#__PURE__*/_react.default.createElement("button", {
+      }, "I code every day and take pride in challenging myself."), /*#__PURE__*/_react.default.createElement(_Table.default, null), /*#__PURE__*/_react.default.createElement("button", {
         className: "btn btn-link",
         onClick: this.toggleDisplayBio
       }, "Show less...")) : /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
@@ -36399,7 +36411,7 @@ var App = /*#__PURE__*/function (_Component) {
 ;
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","./Title":"components/Title.js","../assets/headshot.jpg":"assets/headshot.jpg","../assets/bitmoji1.png":"assets/bitmoji1.png"}],"components/Jokes.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","./Title":"components/Title.js","./Table":"components/Table.js","../assets/bitmoji1.png":"assets/bitmoji1.png"}],"components/Jokes.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37331,6 +37343,471 @@ var BasicApplication = /*#__PURE__*/function (_Component) {
 ;
 var _default = BasicApplication;
 exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/single-page/Advanced.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var AdvancedApplication = /*#__PURE__*/function (_Component) {
+  _inherits(AdvancedApplication, _Component);
+
+  var _super = _createSuper(AdvancedApplication);
+
+  function AdvancedApplication() {
+    var _this;
+
+    _classCallCheck(this, AdvancedApplication);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      fileUpload: false
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "fileUploadFunction", function () {
+      _this.setState({
+        fileUpload: !_this.state.fileUpload ? $('#fileUpload3').val().replace('C:\\fakepath\\', '') : undefined
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(AdvancedApplication, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+        className: "jumbotron"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-sm-8 col-md-4"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: "./logo.png",
+        alt: "app-image",
+        className: "col-12"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-md-8"
+      }, /*#__PURE__*/_react.default.createElement("h2", {
+        className: "text-left text-md-right"
+      }, "Application for Employment")))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "container",
+        id: "appContainer"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/_react.default.createElement("p", null, "Please carefully read and answer all questions below. You will not be able to submit this application until all questions are answered.")))), /*#__PURE__*/_react.default.createElement("form", {
+        style: {
+          padding: '3%'
+        }
+      }, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-group"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/_react.default.createElement("h3", null, "Personal Information")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-sm-6 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "firstName"
+      }, "First Name"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        id: "firstName"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-sm-6 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "lastName"
+      }, "Last Name"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        id: "lastName"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-sm-6 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "email"
+      }, "Email"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        id: "email"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-sm-6 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "phone"
+      }, "Phone"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control phone-mask",
+        id: "phone"
+      })))), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-group"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/_react.default.createElement("h3", null, "Address Information")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "street"
+      }, "Street"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        id: "street"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-sm-12 col-md-6"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "city"
+      }, "City"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        id: "city"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-6 col-sm-6 col-md-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "state"
+      }, "State"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        id: "state"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-6 col-sm-6 col-md-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "zip"
+      }, "Zip"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        id: "zip"
+      })))), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-group"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/_react.default.createElement("h3", null, "Position Information")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-sm-6 col-md-6"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "position"
+      }, "What position are you applying for?"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        id: "position"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-sm-6 col-md-6"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "startDate"
+      }, "When can you start?"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control datepicker",
+        id: "startDate"
+      }))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-sm-6 col-md-6"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "empType"
+      }, "Full or Part Time?"), /*#__PURE__*/_react.default.createElement("select", {
+        id: "empType",
+        className: "custom-select"
+      }, /*#__PURE__*/_react.default.createElement("option", {
+        value: "hr"
+      }), /*#__PURE__*/_react.default.createElement("option", {
+        value: "yr"
+      }, "Full Time"), /*#__PURE__*/_react.default.createElement("option", {
+        value: "hr"
+      }, "Part Time"))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-sm-6 col-md-6"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "payRate"
+      }, "Expected pay rate"), /*#__PURE__*/_react.default.createElement("div", {
+        className: "input-group mb-3"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "input-group-prepend"
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: "input-group-text"
+      }, "$")), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        id: "payRate",
+        className: "form-control"
+      })))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-sm-6 col-md-6"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "crime"
+      }, "Have you ever been convicted of a crime?"), /*#__PURE__*/_react.default.createElement("select", {
+        id: "crime",
+        className: "custom-select"
+      }, /*#__PURE__*/_react.default.createElement("option", {
+        value: ""
+      }), /*#__PURE__*/_react.default.createElement("option", {
+        value: "yes"
+      }, "Yes"), /*#__PURE__*/_react.default.createElement("option", {
+        value: "no"
+      }, "No"))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-sm-6 col-md-6"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "explainCrime"
+      }, "Please explain"), /*#__PURE__*/_react.default.createElement("textarea", {
+        name: "",
+        id: "explainCrime",
+        className: "form-control"
+      })))), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-group"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/_react.default.createElement("h3", null, "Qualifications"), /*#__PURE__*/_react.default.createElement("p", null, "Please list any education or training you feel relates to the position you are applying for that would help you perform the work, such as, schools, colleges, degrees, vocational or technical programs, and military training.")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-lg-6 col-xl-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "institution"
+      }, "Institution"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        id: "institution",
+        className: "form-control"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-6 col-md-6 col-lg-3 col-xl-2"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "from"
+      }, "From Year"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        id: "from",
+        className: "form-control"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-6 col-md-6 col-lg-3 col-xl-2"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "to"
+      }, "To Year"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        id: "to",
+        className: "form-control"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-sm-6 col-xl-2"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "degree"
+      }, "Degree Received"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        id: "degree",
+        className: "form-control"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-sm-6 col-xl-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "area"
+      }, "Area of Specialization"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        id: "area",
+        className: "form-control"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 d-xl-none"
+      }, /*#__PURE__*/_react.default.createElement("hr", null))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("hr", null)), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-6 col-md-4 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        type: "button",
+        className: "col-12 btn btn-outline-secondary"
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: "d-none d-md-inline"
+      }, "Add Qualifications "), /*#__PURE__*/_react.default.createElement("i", {
+        className: "fa fa-plus",
+        "aria-hidden": "true"
+      }))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-6 col-md-4 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        type: "button",
+        className: "col-12 btn btn-outline-secondary"
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: "d-none d-md-inline"
+      }, "Remove Qualifications "), /*#__PURE__*/_react.default.createElement("i", {
+        className: "fa fa-minus",
+        "aria-hidden": "true"
+      }))))), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-group"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/_react.default.createElement("h3", null, "Special Skills"), /*#__PURE__*/_react.default.createElement("p", null, "Please list any skills you feel would help you in the position you are applying for."), /*#__PURE__*/_react.default.createElement("textarea", {
+        id: "specialSkills",
+        className: "form-control"
+      })))), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-group"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/_react.default.createElement("h3", null, "References"), /*#__PURE__*/_react.default.createElement("p", null, "Please at least 3 professional or educational references.")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-md-6 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "referenceName"
+      }, "Name"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        id: "referenceName",
+        className: "form-control"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-md-6 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "referenceEmail"
+      }, "Email"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        id: "referenceEmail",
+        className: "form-control"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-md-6 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "referencePhone"
+      }, "Phone"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        id: "referencePhone",
+        className: "form-control"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-md-6 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        htmlFor: "referenceRlationship"
+      }, "Relationship"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        id: "referenceRlationship",
+        className: "form-control"
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 d-xl-none"
+      }, /*#__PURE__*/_react.default.createElement("hr", null))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("hr", null)), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-6 col-md-4 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        type: "button",
+        className: "col-12 btn btn-outline-secondary"
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: "d-none d-md-inline"
+      }, "Add Reference "), /*#__PURE__*/_react.default.createElement("i", {
+        className: "fa fa-plus",
+        "aria-hidden": "true"
+      }))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-6 col-md-4 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        type: "button",
+        className: "col-12 btn btn-outline-secondary"
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: "d-none d-md-inline"
+      }, "Remove Reference "), /*#__PURE__*/_react.default.createElement("i", {
+        className: "fa fa-minus",
+        "aria-hidden": "true"
+      }))))), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-group"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/_react.default.createElement("h3", null, "Supporting Documents"), /*#__PURE__*/_react.default.createElement("p", null, "These documents could include Resume CV, Cover Letter, Letter of Recomendation, Transcript, etc."), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("i", null, "This is not required, but information in these documents could impact our decision."))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "input-group mb-3"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "input-group-prepend",
+        style: {
+          display: this.state.fileUpload ? 'inline-block' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement("input", {
+        type: "button",
+        className: "btn btn-outline-danger",
+        value: "x",
+        onClick: this.fileUploadFunction
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "custom-file"
+      }, /*#__PURE__*/_react.default.createElement("input", {
+        type: "file",
+        className: "custom-file-input hover-hand",
+        id: "fileUpload3",
+        onChange: this.fileUploadFunction
+      }), /*#__PURE__*/_react.default.createElement("label", {
+        className: "custom-file-label",
+        htmlFor: "fileUpload3",
+        style: {
+          backgroundColor: this.state.fileUpload ? '#CFFED2' : 'whitesmoke'
+        }
+      }, this.state.fileUpload ? this.state.fileUpload : 'Choose file...'))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-6 col-md-4 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        type: "button",
+        className: "col-12 btn btn-outline-secondary"
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: "d-none d-md-inline"
+      }, "Add Document "), /*#__PURE__*/_react.default.createElement("i", {
+        className: "fa fa-plus",
+        "aria-hidden": "true"
+      }))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-6 col-md-4 col-lg-3"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        type: "button",
+        className: "col-12 btn btn-outline-secondary"
+      }, /*#__PURE__*/_react.default.createElement("span", {
+        className: "d-none d-md-inline"
+      }, "Remove Document "), /*#__PURE__*/_react.default.createElement("i", {
+        className: "fa fa-minus",
+        "aria-hidden": "true"
+      }))))))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-group"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 text-right"
+      }, /*#__PURE__*/_react.default.createElement("input", {
+        type: "submit",
+        value: "Submit",
+        className: "btn btn-lg btn-success"
+      }))))));
+    }
+  }]);
+
+  return AdvancedApplication;
+}(_react.Component);
+
+;
+var _default = AdvancedApplication;
+exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/App.js":[function(require,module,exports) {
 "use strict";
 
@@ -37346,6 +37823,8 @@ var _Toolbar = _interopRequireDefault(require("./Toolbar"));
 var _Sidebar = _interopRequireDefault(require("./Sidebar"));
 
 var _Basic = _interopRequireDefault(require("./job-applications/single-page/Basic"));
+
+var _Advanced = _interopRequireDefault(require("./job-applications/single-page/Advanced"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37422,14 +37901,16 @@ var App = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/_react.default.createElement(_Sidebar.default, {
         selectSidebar: this.selectSidebar
       })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "application application-basic",
         style: {
           display: this.state.sidebarSelected === 'ja1' ? 'inline-block' : 'none'
         }
       }, /*#__PURE__*/_react.default.createElement(_Basic.default, null)), /*#__PURE__*/_react.default.createElement("div", {
+        className: "application application-advanced",
         style: {
           display: this.state.sidebarSelected === 'ja2' ? 'inline-block' : 'none'
         }
-      }, "JA2!"), /*#__PURE__*/_react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement(_Advanced.default, null)), /*#__PURE__*/_react.default.createElement("div", {
         style: {
           display: this.state.sidebarSelected === 'ja3' ? 'inline-block' : 'none'
         }
@@ -37447,7 +37928,7 @@ var App = /*#__PURE__*/function (_Component) {
 ;
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Toolbar":"projects/business-prototypes/src/components/Toolbar.js","./Sidebar":"projects/business-prototypes/src/components/Sidebar.js","./job-applications/single-page/Basic":"projects/business-prototypes/src/components/job-applications/single-page/Basic.js"}],"projects/business-prototypes/src/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Toolbar":"projects/business-prototypes/src/components/Toolbar.js","./Sidebar":"projects/business-prototypes/src/components/Sidebar.js","./job-applications/single-page/Basic":"projects/business-prototypes/src/components/job-applications/single-page/Basic.js","./job-applications/single-page/Advanced":"projects/business-prototypes/src/components/job-applications/single-page/Advanced.js"}],"projects/business-prototypes/src/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42334,7 +42815,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53828" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62034" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

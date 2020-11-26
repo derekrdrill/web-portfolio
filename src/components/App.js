@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
 import Title from './Title';
-import profile from '../assets/headshot.jpg';
+import Table from './Table';
 import bitmoji1 from '../assets/bitmoji1.png';
 
 class App extends Component {
@@ -38,62 +38,7 @@ class App extends Component {
                                 <h4 className="mt-4">I code every day and take pride in challenging myself.</h4>
                                 {/* <p>My favorite languages are JavaScript and SQL. I think Knockout.JS is great, I am learning MongoDB, and loving React.JS so far!</p>
                                 <p>I love my dog George, being active, cooking and sports!</p> */}
-
-                                <table className="table mt-5" style={{border: '1px solid gainsboro', boxShadow: '0 0 3px navy'}}>
-                                    <thead style={{backgroundColor: 'azure'}}>
-                                        <tr>
-                                            <th>Client-Side <i className="fa fa-desktop" aria-hidden="true"></i></th>
-                                            <th>Server-Side <i className="fa fa-server" aria-hidden="true"></i></th>
-                                            <th>Database <i className="fa fa-database" aria-hidden="true"></i></th>
-                                            <th>Frameworks/Libraries <i class="fa fa-book" aria-hidden="true"></i></th>
-                                            <th>Development Tools <i class="fa fa-tools" aria-hidden="true"></i></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody style={{backgroundColor: 'beige'}}>
-                                        <tr>
-                                            <td>HTML</td>
-                                            <td>C#</td>
-                                            <td>SQL Server</td>
-                                            <td>Knockout.js</td>
-                                            <td>SSMS</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CSS</td>
-                                            <td>Node.js</td>
-                                            <td>Oracle</td>
-                                            <td>React JS</td>
-                                            <td>VS Code</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Javascript</td>
-                                            <td>VB.Net</td>
-                                            <td>MongoDB</td>
-                                            <td>Bootstrap</td>
-                                            <td>Github</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>jQuery</td>
-                                            <td>Git Bash</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>jQuery-UI</td>
-                                            <td>npm</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>Regex</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <Table />
                                 <button className="btn btn-link" onClick={this.toggleDisplayBio}>Show less...</button> 
                             </div>
                         ) : (
