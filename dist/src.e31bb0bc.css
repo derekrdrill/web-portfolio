@@ -36,6 +36,21 @@ hr {
     background-color: white;
 }
 
+.breadcrumb-item {
+    color: #3F66DB;
+}
+.breadcrumb-item:hover {
+    color: #111D69;
+}
+
+.breadcrumb-item.active:hover {
+    color: coral;
+}
+
+.breadcrumb-item.active {
+    color: coral;
+}
+
 .btn-contact {
     background-color: #E2AA3D;
     border-radius: 10px;
@@ -115,6 +130,17 @@ hr {
 
 .profile {
     border-radius: 1000px;
+}
+
+.reviewApp {
+    background-color: white;
+    max-height: 65vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 3px;
+    box-shadow: 0 0 3px darkslategray;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .sidebar-wrapper {

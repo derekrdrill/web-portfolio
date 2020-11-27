@@ -37808,7 +37808,757 @@ var AdvancedApplication = /*#__PURE__*/function (_Component) {
 ;
 var _default = AdvancedApplication;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/ProgressBar.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var ProgressBar = /*#__PURE__*/function (_Component) {
+  _inherits(ProgressBar, _Component);
+
+  var _super = _createSuper(ProgressBar);
+
+  function ProgressBar() {
+    _classCallCheck(this, ProgressBar);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(ProgressBar, [{
+    key: "render",
+    value: function render() {
+      $('.breadcrumb-item').removeClass('active');
+      $('#brd' + this.props.breadcrumbSelect).addClass('active');
+      return /*#__PURE__*/_react.default.createElement("nav", {
+        style: {
+          display: this.props.breadcrumbSelect === 9 ? 'none' : 'block'
+        }
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "progress"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        id: "appProgress",
+        className: "progress-bar progress-bar-striped progress-bar-animated",
+        role: "progressbar",
+        style: {
+          width: this.props.breadcrumbSelect === 0 ? '0%' : this.props.breadcrumbSelect === 1 ? '12%' : this.props.breadcrumbSelect === 2 ? '25%' : this.props.breadcrumbSelect === 3 ? '38%' : this.props.breadcrumbSelect === 4 ? '50%' : this.props.breadcrumbSelect === 5 ? '63%' : this.props.breadcrumbSelect === 6 ? '75%' : this.props.breadcrumbSelect === 7 ? '88%' : '100%',
+          backgroundColor: this.props.breadcrumbSelect < 8 ? '#4433A2' : 'limegreen'
+        }
+      })), /*#__PURE__*/_react.default.createElement("ol", {
+        className: "breadcrumb"
+      }, /*#__PURE__*/_react.default.createElement("li", {
+        id: "brd0",
+        className: "breadcrumb-item active hover-hand",
+        onClick: this.props.updateBreadcrumbSelectFromBreadcrumb
+      }, "Application for Employment"), /*#__PURE__*/_react.default.createElement("li", {
+        id: "brd1",
+        className: "breadcrumb-item hover-hand",
+        onClick: this.props.updateBreadcrumbSelectFromBreadcrumb,
+        style: {
+          display: this.props.breadcrumbSelect > 0 ? 'inline' : 'none'
+        }
+      }, "Personal Information"), /*#__PURE__*/_react.default.createElement("li", {
+        id: "brd2",
+        className: "breadcrumb-item hover-hand",
+        onClick: this.props.updateBreadcrumbSelectFromBreadcrumb,
+        style: {
+          display: this.props.breadcrumbSelect > 1 ? 'inline' : 'none'
+        }
+      }, "Address Information"), /*#__PURE__*/_react.default.createElement("li", {
+        id: "brd3",
+        className: "breadcrumb-item hover-hand",
+        onClick: this.props.updateBreadcrumbSelectFromBreadcrumb,
+        style: {
+          display: this.props.breadcrumbSelect > 2 ? 'inline' : 'none'
+        }
+      }, "Position  Information"), /*#__PURE__*/_react.default.createElement("li", {
+        id: "brd4",
+        className: "breadcrumb-item hover-hand",
+        onClick: this.props.updateBreadcrumbSelectFromBreadcrumb,
+        style: {
+          display: this.props.breadcrumbSelect > 3 ? 'inline' : 'none'
+        }
+      }, "Qualifications"), /*#__PURE__*/_react.default.createElement("li", {
+        id: "brd5",
+        className: "breadcrumb-item hover-hand",
+        onClick: this.props.updateBreadcrumbSelectFromBreadcrumb,
+        style: {
+          display: this.props.breadcrumbSelect > 4 ? 'inline' : 'none'
+        }
+      }, "Special Skills"), /*#__PURE__*/_react.default.createElement("li", {
+        id: "brd6",
+        className: "breadcrumb-item hover-hand",
+        onClick: this.props.updateBreadcrumbSelectFromBreadcrumb,
+        style: {
+          display: this.props.breadcrumbSelect > 5 ? 'inline' : 'none'
+        }
+      }, "References"), /*#__PURE__*/_react.default.createElement("li", {
+        id: "brd7",
+        className: "breadcrumb-item hover-hand",
+        onClick: this.props.updateBreadcrumbSelectFromBreadcrumb,
+        style: {
+          display: this.props.breadcrumbSelect > 6 ? 'inline' : 'none'
+        }
+      }, "Supporting Documents"), /*#__PURE__*/_react.default.createElement("li", {
+        id: "brd8",
+        className: "breadcrumb-item hover-hand",
+        onClick: this.props.updateBreadcrumbSelectFromBreadcrumb,
+        style: {
+          display: this.props.breadcrumbSelect > 7 ? 'inline' : 'none'
+        }
+      }, "Review Application")));
+    }
+  }]);
+
+  return ProgressBar;
+}(_react.Component);
+
+;
+var _default = ProgressBar;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/LandingPage.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var LandingPage = function LandingPage() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-6 offset-lg-6 text-center text-lg-left"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "Application for Employment"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("p", null, "Please carefully read and complete the following 5 section application."), /*#__PURE__*/_react.default.createElement("p", null, "You can cancel at any time but will not be able to submit this application until all questions are answered."), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null)));
+};
+
+var _default = LandingPage;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/PersonalInformation.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var PersonalInformation = function PersonalInformation() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    className: "pt-5 pb-1"
+  }, "Personal Information")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h4", {
+    className: "pb-2"
+  }, "Please fill in all fields below")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "firstName4"
+  }, "First Name"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "firstName4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "lastName4"
+  }, "Last Name"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "lastName4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "email4"
+  }, "Email"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "email4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "phone4"
+  }, "Phone"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "phone4",
+    className: "form-control app-control"
+  }))), /*#__PURE__*/_react.default.createElement("br", null));
+};
+
+var _default = PersonalInformation;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/AddressInformation.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AddressInformation = function AddressInformation() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    className: "pt-5 pb-1"
+  }, "Address Information")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h4", {
+    className: "pb-2"
+  }, "Please fill in all fields below")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "street4"
+  }, "Street"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "street4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-5"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "city4"
+  }, "City"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "city4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-3"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "state4"
+  }, "State"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "state4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-4"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "zip4"
+  }, "Zip"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "zip4",
+    className: "form-control app-control"
+  }))), /*#__PURE__*/_react.default.createElement("br", null));
+};
+
+var _default = AddressInformation;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/PositionInformation.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var PositionInformation = function PositionInformation() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    className: "pt-5 pb-1"
+  }, "Position Information")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h4", {
+    className: "pb-2"
+  }, "Please fill in all fields below")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "position4"
+  }, "What position are you applying for?"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "psoiton4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "startDate4"
+  }, "When can you start?"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "startDate4",
+    className: "form-control app-control datepicker"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "empType4"
+  }, "Part or Full Time?"), /*#__PURE__*/_react.default.createElement("select", {
+    id: "empType4",
+    className: "custom-select app-control"
+  }, /*#__PURE__*/_react.default.createElement("option", {
+    value: ""
+  }), /*#__PURE__*/_react.default.createElement("option", {
+    value: "pt"
+  }, "Part Time"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "ft"
+  }, "Full Time"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-lg-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "expectedPay4"
+  }, "What is your expected pay?"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "expectedPay4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "felony4"
+  }, "Have you been convicted of a felony?"), /*#__PURE__*/_react.default.createElement("select", {
+    id: "felony4",
+    className: "custom-select app-control"
+  }, /*#__PURE__*/_react.default.createElement("option", {
+    value: ""
+  }), /*#__PURE__*/_react.default.createElement("option", {
+    value: "yes"
+  }, "Yes"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "no"
+  }, "No"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12",
+    "data-bind": "visible: felony4() == 'yes' "
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "explain4"
+  }, "Please explain"), /*#__PURE__*/_react.default.createElement("textarea", {
+    id: "explain4",
+    className: "form-control app-control"
+  }))), /*#__PURE__*/_react.default.createElement("br", null));
+};
+
+var _default = PositionInformation;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/Qualifications.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Qualifications = function Qualifications() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    className: "pt-5 pb-1"
+  }, "Qualifications")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h4", {
+    className: "pb-2"
+  }, "Please fill in all fields below"), /*#__PURE__*/_react.default.createElement("p", null, "Please list any education or training you feel relates to the position you are applying for that would help you perform the work, such as, schools, colleges, degrees, vocational or technical programs, and military training.")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "institution"
+  }, "Institution"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "institution",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-md-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "from4"
+  }, "From Year"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "from4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-md-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "to4"
+  }, "To Year"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "to4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-md-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "degree4"
+  }, "Degree Received"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "degree4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-md-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "area4"
+  }, "Area of Specialization"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "area4",
+    className: "form-control app-control"
+  }))), /*#__PURE__*/_react.default.createElement("br", null));
+};
+
+var _default = Qualifications;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/SpecialSkills.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SpecialSkills = function SpecialSkills() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    className: "pt-5 pb-1"
+  }, "Special Skills")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h4", {
+    className: "pb-2"
+  }, "Please describe any skills you feel would help you in the position you are applying for.")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "specSkills4"
+  }, "Special Skills"), /*#__PURE__*/_react.default.createElement("textarea", {
+    className: "form-control app-control",
+    id: "specSkills4"
+  }))), /*#__PURE__*/_react.default.createElement("br", null));
+};
+
+var _default = SpecialSkills;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/References.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var References = function References() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    className: "pt-5 pb-1"
+  }, "References")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h4", {
+    className: "pb-2"
+  }, "Please list at least 3 professional or educational references.")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-md-6 col-lg-3"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "referenceName4"
+  }, "Name"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "referenceName4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-md-6 col-lg-3"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "referenceEmail4"
+  }, "Email"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "referenceEmail4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-md-6 col-lg-3"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "referencePhone4"
+  }, "Phone"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "referencePhone4",
+    className: "form-control app-control"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "col-12 col-md-6 col-lg-3"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    htmlFor: "referenceRlationship4"
+  }, "Relationship"), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    id: "referenceRlationship4",
+    className: "form-control app-control"
+  }))), /*#__PURE__*/_react.default.createElement("br", null));
+};
+
+var _default = References;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/SupportingDocuments.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SupportingDocuments = function SupportingDocuments() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "pt-5 pb-1"
+  }, "Supporting Documents")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-row"
+  }, /*#__PURE__*/_react.default.createElement("h4", {
+    className: "pb-2"
+  }, "These documents could include Resume CV, Cover Letter, Letter of Recomendation, Transcript, etc."), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("i", null, "This is not required, but information in these documents could impact our decision."))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "form-group"
+  }, /*#__PURE__*/_react.default.createElement("h4", null, "Upload supporting documents"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "input-group mb-3"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "input-group-prepend"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    type: "button",
+    className: "btn btn-outline-danger"
+  }, "x")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "custom-file"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "file",
+    className: "custom-file-input app-control hover-hand",
+    id: "fileUpload4"
+  }), /*#__PURE__*/_react.default.createElement("label", {
+    className: "custom-file-label",
+    htmlFor: "fileUpload4"
+  }))))), /*#__PURE__*/_react.default.createElement("br", null));
+};
+
+var _default = SupportingDocuments;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"projects/business-prototypes/src/components/job-applications/sequential/Breadcrumb.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _ProgressBar = _interopRequireDefault(require("./breadcrumb-components/ProgressBar"));
+
+var _LandingPage = _interopRequireDefault(require("./breadcrumb-components/application-pages/LandingPage"));
+
+var _PersonalInformation = _interopRequireDefault(require("./breadcrumb-components/application-pages/PersonalInformation"));
+
+var _AddressInformation = _interopRequireDefault(require("./breadcrumb-components/application-pages/AddressInformation"));
+
+var _PositionInformation = _interopRequireDefault(require("./breadcrumb-components/application-pages/PositionInformation"));
+
+var _Qualifications = _interopRequireDefault(require("./breadcrumb-components/application-pages/Qualifications"));
+
+var _SpecialSkills = _interopRequireDefault(require("./breadcrumb-components/application-pages/SpecialSkills"));
+
+var _References = _interopRequireDefault(require("./breadcrumb-components/application-pages/References"));
+
+var _SupportingDocuments = _interopRequireDefault(require("./breadcrumb-components/application-pages/SupportingDocuments"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var BreadcrumbApplication = /*#__PURE__*/function (_Component) {
+  _inherits(BreadcrumbApplication, _Component);
+
+  var _super = _createSuper(BreadcrumbApplication);
+
+  function BreadcrumbApplication() {
+    var _this;
+
+    _classCallCheck(this, BreadcrumbApplication);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      breadcrumbSelect: 0,
+      fileUpload: false
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "fileUploadFunction", function () {
+      _this.setState({
+        fileUpload: !_this.state.fileUpload ? $('#fileUpload3').val().replace('C:\\fakepath\\', '') : undefined
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "updateBreadcrumbSelectFromButton", function () {
+      return _this.setState({
+        breadcrumbSelect: _this.state.breadcrumbSelect + 1
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "updateBreadcrumbSelectFromBreadcrumb", function (breadcrumb) {
+      var breadcrumbID = breadcrumb.target.id;
+      var breadcrumbCount = Number(breadcrumbID.replace('brd', ''));
+
+      _this.setState({
+        breadcrumbSelect: breadcrumbCount
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(BreadcrumbApplication, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_ProgressBar.default, {
+        breadcrumbSelect: this.state.breadcrumbSelect,
+        updateBreadcrumbSelectFromBreadcrumb: this.updateBreadcrumbSelectFromBreadcrumb
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: this.state.breadcrumbSelect === 8 ? 'reviewApp' : ''
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          display: this.state.breadcrumbSelect === 0 ? 'block' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement(_LandingPage.default, null), /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-lg-6 offset-lg-6 text-center text-lg-left"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        type: "button",
+        className: "btn btn-lg btn-success",
+        onClick: this.updateBreadcrumbSelectFromButton
+      }, "Click here to begin the application"))), /*#__PURE__*/_react.default.createElement("form", {
+        style: {
+          padding: this.state.breadcrumbSelect === 8 ? '8%' : '1%'
+        }
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          display: this.state.breadcrumbSelect === 8 ? 'inline' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement("h1", null, "Review"), /*#__PURE__*/_react.default.createElement("p", null, "Please review all fields, edit if necessary, then submit forward.")), /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          display: this.state.breadcrumbSelect === 1 || this.state.breadcrumbSelect === 8 ? 'inline' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement(_PersonalInformation.default, null)), /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          display: this.state.breadcrumbSelect === 2 || this.state.breadcrumbSelect === 8 ? 'inline' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement(_AddressInformation.default, null)), /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          display: this.state.breadcrumbSelect === 3 || this.state.breadcrumbSelect === 8 ? 'inline' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement(_PositionInformation.default, null)), /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          display: this.state.breadcrumbSelect === 4 || this.state.breadcrumbSelect === 8 ? 'inline' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement(_Qualifications.default, null)), /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          display: this.state.breadcrumbSelect === 5 || this.state.breadcrumbSelect === 8 ? 'inline' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement(_SpecialSkills.default, null)), /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          display: this.state.breadcrumbSelect === 6 || this.state.breadcrumbSelect === 8 ? 'inline' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement(_References.default, null)), /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          display: this.state.breadcrumbSelect === 7 || this.state.breadcrumbSelect === 8 ? 'inline' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement(_SupportingDocuments.default, null)), /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          display: this.state.breadcrumbSelect > 0 && this.state.breadcrumbSelect < 8 ? 'inline' : 'none'
+        }
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "col-12 col-md-4 col-lg-2 offset-md-8 offset-lg-10"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        type: "button",
+        className: "btn btn-info col-12",
+        onClick: this.updateBreadcrumbSelectFromButton
+      }, this.state.breadcrumbSelect === 1 ? 'Address Information' : this.state.breadcrumbSelect === 2 ? 'Position Information' : this.state.breadcrumbSelect === 3 ? 'Quailifications' : this.state.breadcrumbSelect === 4 ? 'Special Skills' : this.state.breadcrumbSelect === 5 ? 'References' : this.state.breadcrumbSelect === 6 ? 'Supporting Documents' : 'Review Application'))))));
+    }
+  }]);
+
+  return BreadcrumbApplication;
+}(_react.Component);
+
+;
+var _default = BreadcrumbApplication;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./breadcrumb-components/ProgressBar":"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/ProgressBar.js","./breadcrumb-components/application-pages/LandingPage":"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/LandingPage.js","./breadcrumb-components/application-pages/PersonalInformation":"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/PersonalInformation.js","./breadcrumb-components/application-pages/AddressInformation":"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/AddressInformation.js","./breadcrumb-components/application-pages/PositionInformation":"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/PositionInformation.js","./breadcrumb-components/application-pages/Qualifications":"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/Qualifications.js","./breadcrumb-components/application-pages/SpecialSkills":"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/SpecialSkills.js","./breadcrumb-components/application-pages/References":"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/References.js","./breadcrumb-components/application-pages/SupportingDocuments":"projects/business-prototypes/src/components/job-applications/sequential/breadcrumb-components/application-pages/SupportingDocuments.js"}],"projects/business-prototypes/src/components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37825,6 +38575,8 @@ var _Sidebar = _interopRequireDefault(require("./Sidebar"));
 var _Basic = _interopRequireDefault(require("./job-applications/single-page/Basic"));
 
 var _Advanced = _interopRequireDefault(require("./job-applications/single-page/Advanced"));
+
+var _Breadcrumb = _interopRequireDefault(require("./job-applications/sequential/Breadcrumb"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37912,9 +38664,10 @@ var App = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/_react.default.createElement(_Advanced.default, null)), /*#__PURE__*/_react.default.createElement("div", {
         style: {
-          display: this.state.sidebarSelected === 'ja3' ? 'inline-block' : 'none'
+          display: this.state.sidebarSelected === 'ja3' ? 'block' : 'none',
+          marginLeft: '200px'
         }
-      }, "JA3!"), /*#__PURE__*/_react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement(_Breadcrumb.default, null)), /*#__PURE__*/_react.default.createElement("div", {
         style: {
           display: this.state.sidebarSelected === 'ja4' ? 'inline-block' : 'none'
         }
@@ -37928,7 +38681,7 @@ var App = /*#__PURE__*/function (_Component) {
 ;
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Toolbar":"projects/business-prototypes/src/components/Toolbar.js","./Sidebar":"projects/business-prototypes/src/components/Sidebar.js","./job-applications/single-page/Basic":"projects/business-prototypes/src/components/job-applications/single-page/Basic.js","./job-applications/single-page/Advanced":"projects/business-prototypes/src/components/job-applications/single-page/Advanced.js"}],"projects/business-prototypes/src/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Toolbar":"projects/business-prototypes/src/components/Toolbar.js","./Sidebar":"projects/business-prototypes/src/components/Sidebar.js","./job-applications/single-page/Basic":"projects/business-prototypes/src/components/job-applications/single-page/Basic.js","./job-applications/single-page/Advanced":"projects/business-prototypes/src/components/job-applications/single-page/Advanced.js","./job-applications/sequential/Breadcrumb":"projects/business-prototypes/src/components/job-applications/sequential/Breadcrumb.js"}],"projects/business-prototypes/src/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42815,7 +43568,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62034" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52927" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
