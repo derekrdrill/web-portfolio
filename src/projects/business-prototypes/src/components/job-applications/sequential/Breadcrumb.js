@@ -36,7 +36,7 @@ class BreadcrumbApplication extends Component {
                             <button type="button" className="btn btn-lg btn-success" onClick={this.updateBreadcrumbSelectFromButton}>Click here to begin the application</button>
                         </div>
                     </div>
-                    <form style={{ padding: this.state.breadcrumbSelect === 8 ? '8%' : '1%' }}>
+                    <form style={{ padding: this.state.breadcrumbSelect === 8 ? '10%' : '5%' }}>
                         <div style={{ display: this.state.breadcrumbSelect === 8 ? 'inline' : 'none' }}>
                             <h1>Review</h1>
                             <p>Please review all fields, edit if necessary, then submit forward.</p>
