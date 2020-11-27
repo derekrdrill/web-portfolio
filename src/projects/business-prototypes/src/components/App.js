@@ -26,7 +26,7 @@ class App extends Component {
                 <div className="application application-basic" style={{display: this.state.sidebarSelected === 'ja1' ? 'inline-block' : 'none' }}><BasicApplication /></div>
                 <div className="application application-advanced" style={{display: this.state.sidebarSelected === 'ja2' ? 'inline-block' : 'none'}}><AdvancedApplication /></div>
                 <div style={{display: this.state.sidebarSelected === 'ja3' ? 'block' : 'none', marginLeft:'200px'}}><BreadcrumbApplication /></div>
-                <div style={{display: this.state.sidebarSelected === 'news' ? 'inline-block' : 'none', left: '235px', position: 'absolute', right: '30px', top: '165px'}}><SideBySideNewsletter /></div>
+                <div style={{display: this.state.sidebarSelected === 'news' ? 'inline-block' : 'none', left: '235px', position: 'absolute', right: '30px', top: '165px',}}><SideBySideNewsletter /></div>
             </div>
         );
     };

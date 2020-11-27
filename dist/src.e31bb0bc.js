@@ -38619,7 +38619,7 @@ var SideBySideNewsletter = /*#__PURE__*/function (_Component) {
         style: {
           border: '1px solid black',
           paddingTop: '15%',
-          paddingBottom: '22%',
+          paddingBottom: '16%',
           paddingLeft: '7%',
           paddingRight: '8%'
         }
@@ -38629,7 +38629,7 @@ var SideBySideNewsletter = /*#__PURE__*/function (_Component) {
         className: "text-left"
       }, "Sign up for the ", /*#__PURE__*/_react.default.createElement("strong", null, "free"), " newsletter to keep up on all news and special offers."), /*#__PURE__*/_react.default.createElement("input", {
         type: "text",
-        class: "form-cpntrol col-12",
+        class: "form-control-lg col-12",
         placeholder: "Enter your email"
       }), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("button", {
         type: "buttom",
