@@ -7,11 +7,23 @@ class Toolbar extends Component {
             <nav id="prototypeToggle" className="navbar navbar-dark sticky">
                 <button 
                     type="button" 
-                    className="btn btn-sm btn-info"
+                    className="btn btn-sm btn-info d-none d-lg-inline-block"
                     onClick={this.props.toggleSidebar}
                 >
                     {this.props.sidebarShown === true ? <span>&#8920; Close Sidebar</span> : <span>Open Sidebar &#8921;</span>}
                 </button>
+                <div class="dropdown d-inline-block d-lg-none">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a id="ja1_2" class="dropdown-item dropdown-sidebar" href="#" onClick={this.props.selectSidebar}>Job Application (Single-Page Basic)</a>
+                        <a id="ja2_2" class="dropdown-item dropdown-sidebar" href="#" onClick={this.props.selectSidebar}>Job Application (Single-Page Advanced)</a>
+                        <a id="ja3_2" class="dropdown-item dropdown-sidebar" href="#" onClick={this.props.selectSidebar}>Job Application (Sequential Breadcrumb)</a>
+                        <a id="news_2" class="dropdown-item dropdown-sidebar" href="#" onClick={this.props.selectSidebar}>Newsletter sign-up</a>
+                    </div>
+                </div>
+                {/* <button type="button" className="btn btn-secondary">Select a prototype</button> */}
                 <div className="">
                     <div className="btn-group" role="group">
                         <button className="btn btn-success"><i className="fa fa-thumbs-up"></i></button>

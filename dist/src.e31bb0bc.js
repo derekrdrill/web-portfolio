@@ -37034,9 +37034,41 @@ var Toolbar = /*#__PURE__*/function (_Component) {
         className: "navbar navbar-dark sticky"
       }, /*#__PURE__*/_react.default.createElement("button", {
         type: "button",
-        className: "btn btn-sm btn-info",
+        className: "btn btn-sm btn-info d-none d-lg-inline-block",
         onClick: this.props.toggleSidebar
       }, this.props.sidebarShown === true ? /*#__PURE__*/_react.default.createElement("span", null, "\u22D8 Close Sidebar") : /*#__PURE__*/_react.default.createElement("span", null, "Open Sidebar \u22D9")), /*#__PURE__*/_react.default.createElement("div", {
+        class: "dropdown d-inline-block d-lg-none"
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        class: "btn btn-secondary btn-sm dropdown-toggle",
+        type: "button",
+        id: "dropdownMenuButton",
+        "data-toggle": "dropdown",
+        "aria-haspopup": "true",
+        "aria-expanded": "false"
+      }, "Dropdown button"), /*#__PURE__*/_react.default.createElement("div", {
+        class: "dropdown-menu",
+        "aria-labelledby": "dropdownMenuButton"
+      }, /*#__PURE__*/_react.default.createElement("a", {
+        id: "ja1_2",
+        class: "dropdown-item dropdown-sidebar",
+        href: "#",
+        onClick: this.props.selectSidebar
+      }, "Job Application (Single-Page Basic)"), /*#__PURE__*/_react.default.createElement("a", {
+        id: "ja2_2",
+        class: "dropdown-item dropdown-sidebar",
+        href: "#",
+        onClick: this.props.selectSidebar
+      }, "Job Application (Single-Page Advanced)"), /*#__PURE__*/_react.default.createElement("a", {
+        id: "ja3_2",
+        class: "dropdown-item dropdown-sidebar",
+        href: "#",
+        onClick: this.props.selectSidebar
+      }, "Job Application (Sequential Breadcrumb)"), /*#__PURE__*/_react.default.createElement("a", {
+        id: "news_2",
+        class: "dropdown-item dropdown-sidebar",
+        href: "#",
+        onClick: this.props.selectSidebar
+      }, "Newsletter sign-up"))), /*#__PURE__*/_react.default.createElement("div", {
         className: ""
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "btn-group",
@@ -37146,33 +37178,20 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var Sidebar = /*#__PURE__*/function (_Component) {
   _inherits(Sidebar, _Component);
 
   var _super = _createSuper(Sidebar);
 
   function Sidebar() {
-    var _this;
-
     _classCallCheck(this, Sidebar);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    _defineProperty(_assertThisInitialized(_this), "selectSidebar", function (sidebarOption) {
-      _this.props.selectSidebar(sidebarOption.target.id);
-    });
-
-    return _this;
+    return _super.apply(this, arguments);
   }
 
   _createClass(Sidebar, [{
     key: "render",
+    // selectSidebar = sidebarOption => { this.props.selectSidebar(sidebarOption.target.id); };
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("nav", {
         id: "sidebar",
@@ -37186,19 +37205,19 @@ var Sidebar = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/_react.default.createElement("li", {
         id: "ja1",
         className: "list-group-item list-group-item-secondary list-group-item-action active",
-        onClick: this.selectSidebar
+        onClick: this.props.selectSidebar
       }, "Job Application (Single-Page Basic)"), /*#__PURE__*/_react.default.createElement("li", {
         id: "ja2",
         className: "list-group-item list-group-item-secondary list-group-item-action",
-        onClick: this.selectSidebar
+        onClick: this.props.selectSidebar
       }, "Job Application (Single-Page Advanced)"), /*#__PURE__*/_react.default.createElement("li", {
         id: "ja3",
         className: "list-group-item list-group-item-secondary list-group-item-action",
-        onClick: this.selectSidebar
+        onClick: this.props.selectSidebar
       }, "Job Application (Sequential Breadcrumb)"), /*#__PURE__*/_react.default.createElement("li", {
         id: "news",
         className: "list-group-item list-group-item-secondary list-group-item-action",
-        onClick: this.selectSidebar
+        onClick: this.props.selectSidebar
       }, "Newsletter sign-up"), /*#__PURE__*/_react.default.createElement("li", {
         id: "pos",
         className: "list-group-item list-group-item-secondary list-group-item-action"
@@ -38545,7 +38564,9 @@ var BreadcrumbApplication = /*#__PURE__*/function (_Component) {
         onClick: this.updateBreadcrumbSelectFromButton
       }, "Click here to begin the application"))), /*#__PURE__*/_react.default.createElement("form", {
         style: {
-          padding: this.state.breadcrumbSelect === 8 ? '10%' : '5%'
+          paddingTop: this.state.breadcrumbSelect === 8 ? '9%' : '1%',
+          paddingRight: this.state.breadcrumbSelect === 8 ? '10%' : '7%',
+          paddingLeft: this.state.breadcrumbSelect === 8 ? '10%' : '7%'
         }
       }, /*#__PURE__*/_react.default.createElement("div", {
         style: {
@@ -38766,12 +38787,15 @@ var App = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "selectSidebar", function (sidebarOption) {
+      var sidebarID = sidebarOption.target.id.includes('_2') ? sidebarOption.target.id.substring(0, sidebarOption.target.id.indexOf('_')) : sidebarOption.target.id;
+
       _this.setState({
-        sidebarSelected: sidebarOption
+        sidebarSelected: sidebarID
       });
 
       $('.list-group-item').removeClass('active');
-      $('#' + sidebarOption).addClass('active');
+      $('#' + sidebarID).addClass('active');
+      $('.dropdown-sidebar').removeClass('active');
     });
 
     _defineProperty(_assertThisInitialized(_this), "toggleSidebar", function () {
@@ -38793,7 +38817,8 @@ var App = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/_react.default.createElement(_Toolbar.default, {
         sidebarShown: this.state.sidebarShown,
-        toggleSidebar: this.toggleSidebar
+        toggleSidebar: this.toggleSidebar,
+        selectSidebar: this.selectSidebar
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "sidebar-wrapper",
         style: {
@@ -38804,21 +38829,21 @@ var App = /*#__PURE__*/function (_Component) {
       })), /*#__PURE__*/_react.default.createElement("div", {
         className: "application application-basic",
         style: {
-          display: this.state.sidebarSelected === 'ja1' ? 'inline-block' : 'none'
+          display: this.state.sidebarSelected === 'ja1' || this.state.sidebarSelected === 'ja1_2' ? 'inline-block' : 'none'
         }
       }, /*#__PURE__*/_react.default.createElement(_Basic.default, null)), /*#__PURE__*/_react.default.createElement("div", {
         className: "application application-advanced",
         style: {
-          display: this.state.sidebarSelected === 'ja2' ? 'inline-block' : 'none'
+          display: this.state.sidebarSelected === 'ja2' || this.state.sidebarSelected === 'ja2_2' ? 'inline-block' : 'none'
         }
       }, /*#__PURE__*/_react.default.createElement(_Advanced.default, null)), /*#__PURE__*/_react.default.createElement("div", {
         style: {
-          display: this.state.sidebarSelected === 'ja3' ? 'block' : 'none',
+          display: this.state.sidebarSelected === 'ja3' || this.state.sidebarSelected === 'ja3_2' ? 'block' : 'none',
           marginLeft: this.state.sidebarShown ? '200px' : '0px'
         }
       }, /*#__PURE__*/_react.default.createElement(_Breadcrumb.default, null)), /*#__PURE__*/_react.default.createElement("div", {
         style: {
-          display: this.state.sidebarSelected === 'news' ? 'inline-block' : 'none',
+          display: this.state.sidebarSelected === 'news' || this.state.sidebarSelected === 'news_2' ? 'inline-block' : 'none',
           left: this.state.sidebarShown ? '235px' : '18px',
           position: 'absolute',
           right: '30px',
@@ -43721,7 +43746,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51173" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59896" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

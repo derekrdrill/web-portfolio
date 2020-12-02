@@ -134,7 +134,7 @@ hr {
 
 .reviewApp {
     background-color: white;
-    max-height: 65vh;
+    max-height: 68vh;
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 3px;
@@ -224,8 +224,8 @@ hr {
 
 #sidebar {
     min-width: 200px;
-    max-width: 200px;
-    min-height: 100vh;
+    max-width: 20px;
+    min-height: 82.5vh;
     background-color: whitesmoke;
     box-shadow: 2px 2px 5px darkslategrey;
 }
